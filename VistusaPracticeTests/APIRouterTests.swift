@@ -9,9 +9,13 @@
 import Foundation
 import Quick
 import Nimble
+@testable import VistusaPractice
 
 class APIRouterTests:QuickSpec {
-    func spec() {
-        
+    override func spec() {
+        it("Test Route") {
+            let request = APIRouter.fact.urlRequest
+            
+        }
     }
 }
