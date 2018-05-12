@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21225F80B82EA29772F75428 /* Pods_VistusaPracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E05D71B3103D2F2633C2F4 /* Pods_VistusaPracticeTests.framework */; };
 		96652E0F20A56366006A53DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96652E0E20A56366006A53DA /* AppDelegate.swift */; };
 		96652E1120A56366006A53DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96652E1020A56366006A53DA /* ViewController.swift */; };
 		96652E1420A56366006A53DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96652E1220A56366006A53DA /* Main.storyboard */; };
 		96652E1620A5636B006A53DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96652E1520A5636B006A53DA /* Assets.xcassets */; };
 		96652E1920A5636B006A53DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96652E1720A5636B006A53DA /* LaunchScreen.storyboard */; };
 		96652E2420A5636B006A53DA /* VistusaPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96652E2320A5636B006A53DA /* VistusaPracticeTests.swift */; };
+		C0FDB4A5CC575165A5A29A55 /* Pods_VistusaPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20008D6000FDC60B2B648A0 /* Pods_VistusaPractice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48A49807E7EC6062DD544192 /* Pods-VistusaPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VistusaPractice.release.xcconfig"; path = "Pods/Target Support Files/Pods-VistusaPractice/Pods-VistusaPractice.release.xcconfig"; sourceTree = "<group>"; };
 		96652E0B20A56366006A53DA /* VistusaPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VistusaPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96652E0E20A56366006A53DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96652E1020A56366006A53DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +39,11 @@
 		96652E1F20A5636B006A53DA /* VistusaPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VistusaPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96652E2320A5636B006A53DA /* VistusaPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistusaPracticeTests.swift; sourceTree = "<group>"; };
 		96652E2520A5636B006A53DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98E05D71B3103D2F2633C2F4 /* Pods_VistusaPracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VistusaPracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2F2334CB25CFE26D8C77012 /* Pods-VistusaPracticeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VistusaPracticeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VistusaPracticeTests/Pods-VistusaPracticeTests.release.xcconfig"; sourceTree = "<group>"; };
+		C36FACB328C011882AE4FC9E /* Pods-VistusaPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VistusaPractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VistusaPractice/Pods-VistusaPractice.debug.xcconfig"; sourceTree = "<group>"; };
+		CE5115FB8058C39EE7F0BF40 /* Pods-VistusaPracticeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VistusaPracticeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VistusaPracticeTests/Pods-VistusaPracticeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D20008D6000FDC60B2B648A0 /* Pods_VistusaPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VistusaPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0FDB4A5CC575165A5A29A55 /* Pods_VistusaPractice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21225F80B82EA29772F75428 /* Pods_VistusaPracticeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52D15B25E6AAE62D244BD30B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D20008D6000FDC60B2B648A0 /* Pods_VistusaPractice.framework */,
+				98E05D71B3103D2F2633C2F4 /* Pods_VistusaPracticeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		96652E0220A56366006A53DA = {
 			isa = PBXGroup;
 			children = (
 				96652E0D20A56366006A53DA /* VistusaPractice */,
 				96652E2220A5636B006A53DA /* VistusaPracticeTests */,
 				96652E0C20A56366006A53DA /* Products */,
+				BA0CEA0DF4B54E190279E884 /* Pods */,
+				52D15B25E6AAE62D244BD30B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +117,17 @@
 			path = VistusaPracticeTests;
 			sourceTree = "<group>";
 		};
+		BA0CEA0DF4B54E190279E884 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C36FACB328C011882AE4FC9E /* Pods-VistusaPractice.debug.xcconfig */,
+				48A49807E7EC6062DD544192 /* Pods-VistusaPractice.release.xcconfig */,
+				CE5115FB8058C39EE7F0BF40 /* Pods-VistusaPracticeTests.debug.xcconfig */,
+				A2F2334CB25CFE26D8C77012 /* Pods-VistusaPracticeTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96652E2820A5636B006A53DA /* Build configuration list for PBXNativeTarget "VistusaPractice" */;
 			buildPhases = (
+				8ACD0E54112615FB0FD71B5C /* [CP] Check Pods Manifest.lock */,
 				96652E0720A56366006A53DA /* Sources */,
 				96652E0820A56366006A53DA /* Frameworks */,
 				96652E0920A56366006A53DA /* Resources */,
+				9111159D04C3A009104FE3D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96652E2B20A5636B006A53DA /* Build configuration list for PBXNativeTarget "VistusaPracticeTests" */;
 			buildPhases = (
+				2A56D2FC6765773283B53AF7 /* [CP] Check Pods Manifest.lock */,
 				96652E1B20A5636B006A53DA /* Sources */,
 				96652E1C20A5636B006A53DA /* Frameworks */,
 				96652E1D20A5636B006A53DA /* Resources */,
@@ -191,6 +226,71 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A56D2FC6765773283B53AF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VistusaPracticeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8ACD0E54112615FB0FD71B5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VistusaPractice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9111159D04C3A009104FE3D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VistusaPractice/Pods-VistusaPractice-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VistusaPractice/Pods-VistusaPractice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96652E0720A56366006A53DA /* Sources */ = {
@@ -356,15 +456,13 @@
 		};
 		96652E2920A5636B006A53DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C36FACB328C011882AE4FC9E /* Pods-VistusaPractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8387LU2S3Z;
 				INFOPLIST_FILE = VistusaPractice/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.patrickgao.VistusaPractice.VistusaPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -374,15 +472,13 @@
 		};
 		96652E2A20A5636B006A53DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48A49807E7EC6062DD544192 /* Pods-VistusaPractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8387LU2S3Z;
 				INFOPLIST_FILE = VistusaPractice/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.patrickgao.VistusaPractice.VistusaPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -392,17 +488,14 @@
 		};
 		96652E2C20A5636B006A53DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE5115FB8058C39EE7F0BF40 /* Pods-VistusaPracticeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8387LU2S3Z;
 				INFOPLIST_FILE = VistusaPracticeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.patrickgao.VistusaPractice.VistusaPracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -413,17 +506,14 @@
 		};
 		96652E2D20A5636B006A53DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2F2334CB25CFE26D8C77012 /* Pods-VistusaPracticeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8387LU2S3Z;
 				INFOPLIST_FILE = VistusaPracticeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.patrickgao.VistusaPractice.VistusaPracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
