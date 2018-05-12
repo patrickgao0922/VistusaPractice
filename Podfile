@@ -9,6 +9,12 @@ target 'VistusaPractice' do
   pod 'RxCocoa',    '~> 4.0'
   pod 'Alamofire', '~> 4.7'
   pod 'ObjectMapper', '~> 3.1'
+
+  def testing_pods
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'RxBlocking'
+  end
   
 
   # Pods for VistusaPractice
@@ -16,6 +22,7 @@ target 'VistusaPractice' do
   target 'VistusaPracticeTests' do
     inherit! :search_paths
     # Pods for testing
+    testing_pods
   end
 
 end
