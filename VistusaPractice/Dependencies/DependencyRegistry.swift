@@ -21,5 +21,9 @@ class DependencyRegistry {
         container.register(APIClient.self) { (r) in
             APIClientImplementation()
         }
+        
+        container.register(FactTranslationLayer.self) { r in
+            FactTranslationLayerImplementation()
+        }
     }
 }

@@ -9,18 +9,27 @@
 import Foundation
 
 protocol FactTranslationLayer {
-    func translateToFactDTO(from:FactResponse) -> FactDTO
-    func translationToRowDTO(from:Row) -> RowDTO
+    func translateToFactDTO(from row:FactResponse) -> FactDTO
+    func translationToRowDTO(from faceResponse:Row) -> RowDTO
 }
 
 class FactTranslationLayerImplementation:FactTranslationLayer {
     
-    func translationToRowDTO(from: Row) -> RowDTO {
-        return RowDTO()
+    func translationToRowDTO(from row: Row) -> RowDTO {
+        
+        let rowDTO = RowDTO(title: row.title, description: row.description, imageHref: row.imageHref)
+        return rowDTO
     }
     
-    func translateToFactDTO(from: FactResponse) -> FactDTO {
-        return FactDTO()
+    func translateToFactDTO(from factResponse: FactResponse) -> FactDTO {
+        var rowDTOs:[RowDTO] = []
+        if factResponse.rows != nil {
+            rowDTOs = factResponse.rows!.map({ (row) -> RowDTO in
+                return translationToRowDTO(from: row)
+            })
+        }
+        
+        return FactDTO(title: factResponse.title, rows: rowDTOs)
     }
     
     

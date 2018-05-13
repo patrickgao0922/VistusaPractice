@@ -1,5 +1,5 @@
 //
-//  APIClientTests.swift
+//  FactDTOTests.swift
 //  VistusaPracticeTests
 //
 //  Created by Patrick Gao on 13/5/18.
@@ -10,15 +10,14 @@ import Foundation
 import Quick
 import Nimble
 import Swinject
-import RxBlocking
 import ObjectMapper
 @testable import VistusaPractice
 
-class APIClientTests:QuickSpec {
+class TranslationLayerTests:QuickSpec {
     override func spec() {
         let container = Container()
         let dependencyRegistry = DependencyRegistry(withContainer: container)
-        let apiClient:APIClient = dependencyRegistry.container.resolve(APIClient.self)!
+        let translationLayer:FactTranslationLayer = dependencyRegistry.container.resolve(FactTranslationLayer.self)!
         let jsonString = """
             {
             "title":"About Canada",
@@ -96,24 +95,12 @@ class APIClientTests:QuickSpec {
             ]
             }
             """
-        it("testFetchFact") {
-
-            let result = apiClient.fetchFact().toBlocking(timeout: 5.0).materialize()
-            switch result {
-            case .completed(let elements):
-                let response = elements[0]
-                expect(response.title).notTo(beNil())
-                expect(response.title).to(equal("About Canada"))
-            default: fail()
-            }
-        }
-        
-        it("test Json Mapper") {
-            let response = FactResponse(JSONString: jsonString)
-            expect(response?.title).toNot(beNil())
-            expect(response!.title!).to(equal("About Canada"))
-            expect(response!.rows).toNot(beNil())
-            expect(response!.rows!.count).to(equal(14))
+        let factResponse = FactResponse(JSONString: jsonString)
+        it("Test translateToFactDTO") {
+            let factDTO = translationLayer.translateToFactDTO(from: factResponse!)
+            expect(factDTO.title).notTo(beNil())
+            expect(factDTO.title!).to(equal("About Canada"))
+            expect(factDTO.rows.count).to(equal(14))
         }
     }
 }
