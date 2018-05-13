@@ -19,7 +19,7 @@ class APIClientImplementation:NSObject,APIClient {
     func fetchFact() -> Single<FactResponse>{
         return Single<FactResponse>.create(subscribe: { (single) -> Disposable in
             request(APIRouter.fact)
-                .response
+//                .responseString(completionHandler: <#T##(DataResponse<String>) -> Void#>)
             return Disposables.create()
         })
     }
