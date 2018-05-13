@@ -22,6 +22,7 @@
 		96652E1920A5636B006A53DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96652E1720A5636B006A53DA /* LaunchScreen.storyboard */; };
 		96652E2420A5636B006A53DA /* VistusaPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96652E2320A5636B006A53DA /* VistusaPracticeTests.swift */; };
 		9689A10E20A8FFE90019FB1A /* FactModelLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A10D20A8FFE90019FB1A /* FactModelLayerTests.swift */; };
+		9689A11120A9055C0019FB1A /* FactCollectionViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A11020A9055C0019FB1A /* FactCollectionViewViewModel.swift */; };
 		96D8E2E120A69B8600CDC308 /* APIRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D8E2E020A69B8600CDC308 /* APIRouterTests.swift */; };
 		96D8E2E320A6A12D00CDC308 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D8E2E220A6A12D00CDC308 /* APIRouter.swift */; };
 		C0FDB4A5CC575165A5A29A55 /* Pods_VistusaPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20008D6000FDC60B2B648A0 /* Pods_VistusaPractice.framework */; };
@@ -57,6 +58,7 @@
 		96652E2320A5636B006A53DA /* VistusaPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistusaPracticeTests.swift; sourceTree = "<group>"; };
 		96652E2520A5636B006A53DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9689A10D20A8FFE90019FB1A /* FactModelLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModelLayerTests.swift; sourceTree = "<group>"; };
+		9689A11020A9055C0019FB1A /* FactCollectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCollectionViewViewModel.swift; sourceTree = "<group>"; };
 		96D8E2E020A69B8600CDC308 /* APIRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouterTests.swift; sourceTree = "<group>"; };
 		96D8E2E220A6A12D00CDC308 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		98E05D71B3103D2F2633C2F4 /* Pods_VistusaPracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VistusaPracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +152,7 @@
 		96652E0D20A56366006A53DA /* VistusaPractice */ = {
 			isa = PBXGroup;
 			children = (
+				9689A10F20A9052B0019FB1A /* Model View */,
 				96110E3120A7E9A5002E311C /* TranslationLayer */,
 				96110E2E20A7E794002E311C /* Data Transfer Object */,
 				96110E2B20A7E73F002E311C /* ModelLayer */,
@@ -176,6 +179,14 @@
 				9689A10D20A8FFE90019FB1A /* FactModelLayerTests.swift */,
 			);
 			path = VistusaPracticeTests;
+			sourceTree = "<group>";
+		};
+		9689A10F20A9052B0019FB1A /* Model View */ = {
+			isa = PBXGroup;
+			children = (
+				9689A11020A9055C0019FB1A /* FactCollectionViewViewModel.swift */,
+			);
+			path = "Model View";
 			sourceTree = "<group>";
 		};
 		96D8E2DF20A69B0600CDC308 /* Network Layer */ = {
@@ -396,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9689A11120A9055C0019FB1A /* FactCollectionViewViewModel.swift in Sources */,
 				96110E3020A7E7EE002E311C /* FactDTO.swift in Sources */,
 				96652E1120A56366006A53DA /* ViewController.swift in Sources */,
 				96D8E2E320A6A12D00CDC308 /* APIRouter.swift in Sources */,

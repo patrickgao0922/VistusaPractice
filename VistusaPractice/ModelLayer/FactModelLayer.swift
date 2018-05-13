@@ -21,9 +21,11 @@ class FactModelLayerImplementation:FactModelLayer {
         self.translationLayer = translationLayer
     }
     
+    /// Fetch fact using API client and translate result into Fact DTO
+    ///
+    /// - Returns: Single Observable with element type of FactDTO
     func fetchFact() -> Single<FactDTO> {
         return apiClient.fetchFact().map { (factResponse) -> FactDTO in
-//            return FactDTO(title: nil, rows: [])
             return self.translationLayer.translateToFactDTO(from: factResponse)
         }
     }
