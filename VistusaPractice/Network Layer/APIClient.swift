@@ -17,6 +17,7 @@ protocol APIClient {
 
 enum HTTPError:Error{
     case noResultData
+    case jsonParsingError
 }
 
 class APIClientImplementation:NSObject,APIClient {
@@ -27,7 +28,10 @@ class APIClientImplementation:NSObject,APIClient {
                     guard let jsonString = response.result.value else {
                         return single(.error(HTTPError.noResultData))
                     }
-                    
+                    guard let factResponse = FactResponse(JSONString: jsonString) else {
+                        return single(.error(HTTPError.jsonParsingError))
+                    }
+                    single(.success(factResponse))
                 })
             return Disposables.create()
         })

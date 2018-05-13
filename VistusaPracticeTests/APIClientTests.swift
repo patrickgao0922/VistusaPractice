@@ -21,6 +21,7 @@ class APIClientTests:QuickSpec {
         let apiClient:APIClient = dependencyRegistry.container.resolve(APIClient.self)!
         
         it("testFetchFact") {
+
             let result = apiClient.fetchFact().toBlocking(timeout: 5.0).materialize()
             switch result {
             case .completed(let elements):
