@@ -16,6 +16,40 @@ protocol APIClient {
 
 class APIClientImplementation:NSObject,APIClient {
     func fetchFact() -> Single<FactResponse>{
+        return Single<FactResponse>.create(subscribe: { (single) -> Disposable in
+            return Disposables.create()
+        })
+    }
+}
+
+struct FactResponse:Mappable {
+    init?(map: Map) {
         
     }
+    
+    var title:String?
+    var rows:[Fact]?
+    mutating func mapping(map: Map) {
+        title <- map["title"]
+        rows <- map["rows"]
+    }
+}
+
+struct Fact:Mappable{
+    
+    var title:String?
+    var description:String?
+    var imageHref:String?
+    
+    init?(map: Map) {
+        
+    }
+    
+    mutating func mapping(map: Map) {
+        title <- map["title"]
+        description <- map["description"]
+        imageHref <- map["imageHref"]
+    }
+    
+    
 }
