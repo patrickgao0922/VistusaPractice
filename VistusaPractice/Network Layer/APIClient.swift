@@ -44,14 +44,14 @@ struct FactResponse:Mappable {
     }
     
     var title:String?
-    var rows:[Fact]?
+    var rows:[Row]?
     mutating func mapping(map: Map) {
         title <- map["title"]
         rows <- map["rows"]
     }
 }
 
-struct Fact:Mappable{
+struct Row:Mappable{
     
     var title:String?
     var description:String?

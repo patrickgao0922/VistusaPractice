@@ -12,6 +12,7 @@
 		96110E2720A7C51E002E311C /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96110E2620A7C51E002E311C /* APIClientTests.swift */; };
 		96110E2A20A7DD58002E311C /* DependencyRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96110E2920A7DD58002E311C /* DependencyRegistry.swift */; };
 		96110E2D20A7E759002E311C /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96110E2C20A7E759002E311C /* FactModel.swift */; };
+		96110E3020A7E7EE002E311C /* FactDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96110E2F20A7E7EE002E311C /* FactDTO.swift */; };
 		96652E0F20A56366006A53DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96652E0E20A56366006A53DA /* AppDelegate.swift */; };
 		96652E1120A56366006A53DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96652E1020A56366006A53DA /* ViewController.swift */; };
 		96652E1420A56366006A53DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96652E1220A56366006A53DA /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		96110E2620A7C51E002E311C /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		96110E2920A7DD58002E311C /* DependencyRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegistry.swift; sourceTree = "<group>"; };
 		96110E2C20A7E759002E311C /* FactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
+		96110E2F20A7E7EE002E311C /* FactDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDTO.swift; sourceTree = "<group>"; };
 		96652E0B20A56366006A53DA /* VistusaPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VistusaPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96652E0E20A56366006A53DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96652E1020A56366006A53DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		96110E2E20A7E794002E311C /* Data Transfer Object */ = {
 			isa = PBXGroup;
 			children = (
+				96110E2F20A7E7EE002E311C /* FactDTO.swift */,
 			);
 			path = "Data Transfer Object";
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96110E3020A7E7EE002E311C /* FactDTO.swift in Sources */,
 				96652E1120A56366006A53DA /* ViewController.swift in Sources */,
 				96D8E2E320A6A12D00CDC308 /* APIRouter.swift in Sources */,
 				96110E2A20A7DD58002E311C /* DependencyRegistry.swift in Sources */,
