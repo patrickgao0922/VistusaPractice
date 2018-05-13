@@ -15,12 +15,20 @@ protocol FactTranslationLayer {
 
 class FactTranslationLayerImplementation:FactTranslationLayer {
     
+    /// Translate Row mapper object to Row DTO
+    ///
+    /// - Parameter row: Row mapper obtained from response
+    /// - Returns: RowDTO result
     func translationToRowDTO(from row: Row) -> RowDTO {
         
         let rowDTO = RowDTO(title: row.title, description: row.description, imageHref: row.imageHref)
         return rowDTO
     }
     
+    /// Translate Fact Mapper object to Fact DTO
+    ///
+    /// - Parameter factResponse: fact Response from response
+    /// - Returns: fact DTO result
     func translateToFactDTO(from factResponse: FactResponse) -> FactDTO {
         var rowDTOs:[RowDTO] = []
         if factResponse.rows != nil {

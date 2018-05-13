@@ -18,12 +18,16 @@ class DependencyRegistry {
     }
     
     func registerDependencies() {
-        container.register(APIClient.self) { (r) in
+        container.register(APIClient.self) { r in
             APIClientImplementation()
         }
         
         container.register(FactTranslationLayer.self) { r in
             FactTranslationLayerImplementation()
+        }
+        
+        container.register(FactModelLayer.self) { r in
+            FactModelLayerImplementation(with: r.resolve(APIClient.self)!, translationLayer: r.resolve(FactTranslationLayer.self)!)
         }
     }
 }

@@ -11,7 +11,7 @@
 		96110E2520A7C4BA002E311C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96110E2420A7C4BA002E311C /* APIClient.swift */; };
 		96110E2720A7C51E002E311C /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96110E2620A7C51E002E311C /* APIClientTests.swift */; };
 		96110E2A20A7DD58002E311C /* DependencyRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96110E2920A7DD58002E311C /* DependencyRegistry.swift */; };
-		96110E2D20A7E759002E311C /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96110E2C20A7E759002E311C /* FactModel.swift */; };
+		96110E2D20A7E759002E311C /* FactModelLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96110E2C20A7E759002E311C /* FactModelLayer.swift */; };
 		96110E3020A7E7EE002E311C /* FactDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96110E2F20A7E7EE002E311C /* FactDTO.swift */; };
 		96110E3320A7E9B6002E311C /* TranslationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96110E3220A7E9B6002E311C /* TranslationLayer.swift */; };
 		96110E3520A7F933002E311C /* TranslationLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96110E3420A7F933002E311C /* TranslationLayerTests.swift */; };
@@ -21,6 +21,7 @@
 		96652E1620A5636B006A53DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96652E1520A5636B006A53DA /* Assets.xcassets */; };
 		96652E1920A5636B006A53DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96652E1720A5636B006A53DA /* LaunchScreen.storyboard */; };
 		96652E2420A5636B006A53DA /* VistusaPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96652E2320A5636B006A53DA /* VistusaPracticeTests.swift */; };
+		9689A10E20A8FFE90019FB1A /* FactModelLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A10D20A8FFE90019FB1A /* FactModelLayerTests.swift */; };
 		96D8E2E120A69B8600CDC308 /* APIRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D8E2E020A69B8600CDC308 /* APIRouterTests.swift */; };
 		96D8E2E320A6A12D00CDC308 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D8E2E220A6A12D00CDC308 /* APIRouter.swift */; };
 		C0FDB4A5CC575165A5A29A55 /* Pods_VistusaPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20008D6000FDC60B2B648A0 /* Pods_VistusaPractice.framework */; };
@@ -41,7 +42,7 @@
 		96110E2420A7C4BA002E311C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		96110E2620A7C51E002E311C /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		96110E2920A7DD58002E311C /* DependencyRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyRegistry.swift; sourceTree = "<group>"; };
-		96110E2C20A7E759002E311C /* FactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
+		96110E2C20A7E759002E311C /* FactModelLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModelLayer.swift; sourceTree = "<group>"; };
 		96110E2F20A7E7EE002E311C /* FactDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDTO.swift; sourceTree = "<group>"; };
 		96110E3220A7E9B6002E311C /* TranslationLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationLayer.swift; sourceTree = "<group>"; };
 		96110E3420A7F933002E311C /* TranslationLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationLayerTests.swift; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		96652E1F20A5636B006A53DA /* VistusaPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VistusaPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96652E2320A5636B006A53DA /* VistusaPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistusaPracticeTests.swift; sourceTree = "<group>"; };
 		96652E2520A5636B006A53DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9689A10D20A8FFE90019FB1A /* FactModelLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModelLayerTests.swift; sourceTree = "<group>"; };
 		96D8E2E020A69B8600CDC308 /* APIRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouterTests.swift; sourceTree = "<group>"; };
 		96D8E2E220A6A12D00CDC308 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		98E05D71B3103D2F2633C2F4 /* Pods_VistusaPracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VistusaPracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,7 +106,7 @@
 		96110E2B20A7E73F002E311C /* ModelLayer */ = {
 			isa = PBXGroup;
 			children = (
-				96110E2C20A7E759002E311C /* FactModel.swift */,
+				96110E2C20A7E759002E311C /* FactModelLayer.swift */,
 			);
 			path = ModelLayer;
 			sourceTree = "<group>";
@@ -171,6 +173,7 @@
 				96D8E2E020A69B8600CDC308 /* APIRouterTests.swift */,
 				96110E2620A7C51E002E311C /* APIClientTests.swift */,
 				96110E3420A7F933002E311C /* TranslationLayerTests.swift */,
+				9689A10D20A8FFE90019FB1A /* FactModelLayerTests.swift */,
 			);
 			path = VistusaPracticeTests;
 			sourceTree = "<group>";
@@ -397,7 +400,7 @@
 				96652E1120A56366006A53DA /* ViewController.swift in Sources */,
 				96D8E2E320A6A12D00CDC308 /* APIRouter.swift in Sources */,
 				96110E2A20A7DD58002E311C /* DependencyRegistry.swift in Sources */,
-				96110E2D20A7E759002E311C /* FactModel.swift in Sources */,
+				96110E2D20A7E759002E311C /* FactModelLayer.swift in Sources */,
 				96110E3320A7E9B6002E311C /* TranslationLayer.swift in Sources */,
 				96652E0F20A56366006A53DA /* AppDelegate.swift in Sources */,
 				96110E2520A7C4BA002E311C /* APIClient.swift in Sources */,
@@ -412,6 +415,7 @@
 				96110E3520A7F933002E311C /* TranslationLayerTests.swift in Sources */,
 				96652E2420A5636B006A53DA /* VistusaPracticeTests.swift in Sources */,
 				96D8E2E120A69B8600CDC308 /* APIRouterTests.swift in Sources */,
+				9689A10E20A8FFE90019FB1A /* FactModelLayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
