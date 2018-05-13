@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import Alamofire
 import ObjectMapper
 
 protocol APIClient {
@@ -17,6 +18,8 @@ protocol APIClient {
 class APIClientImplementation:NSObject,APIClient {
     func fetchFact() -> Single<FactResponse>{
         return Single<FactResponse>.create(subscribe: { (single) -> Disposable in
+            request(APIRouter.fact)
+                .response
             return Disposables.create()
         })
     }
