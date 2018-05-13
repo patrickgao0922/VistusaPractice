@@ -10,17 +10,25 @@ import Foundation
 import Quick
 import Nimble
 import Swinject
+import RxBlocking
 import ObjectMapper
 @testable import VistusaPractice
 
 class APIClientTests:QuickSpec {
     override func spec() {
-        var container = Container()
-        var dependencyRegistry = DependencyRegistry(withContainer: container)
-        var apiClient:APIClient = dependencyRegistry.container.resolve(APIClient.self)
+        let container = Container()
+        let dependencyRegistry = DependencyRegistry(withContainer: container)
+        let apiClient:APIClient = dependencyRegistry.container.resolve(APIClient.self)!
         
         it("testFetchFact") {
-            
+            let result = apiClient.fetchFact().toBlocking(timeout: 5.0).materialize()
+            switch result {
+            case .completed(let elements):
+                let response = elements[0]
+                expect(response.title).notTo(beNil())
+                expect(response.title).to(equal("About Canada"))
+            default: fail()
+            }
         }
         
         it("test Json Mapper") {

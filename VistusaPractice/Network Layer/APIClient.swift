@@ -12,7 +12,7 @@ import Alamofire
 import ObjectMapper
 
 protocol APIClient {
-    
+    func fetchFact() -> Single<FactResponse>
 }
 
 class APIClientImplementation:NSObject,APIClient {

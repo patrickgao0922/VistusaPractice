@@ -14,6 +14,7 @@ class DependencyRegistry {
     
     init(withContainer container:Container) {
         self.container = container
+        registerDependencies()
     }
     
     func registerDependencies() {
