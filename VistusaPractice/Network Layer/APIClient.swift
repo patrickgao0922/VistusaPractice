@@ -15,11 +15,20 @@ protocol APIClient {
     func fetchFact() -> Single<FactResponse>
 }
 
+enum HTTPError:Error{
+    case noResultData
+}
+
 class APIClientImplementation:NSObject,APIClient {
     func fetchFact() -> Single<FactResponse>{
         return Single<FactResponse>.create(subscribe: { (single) -> Disposable in
             request(APIRouter.fact)
-//                .responseString(completionHandler: <#T##(DataResponse<String>) -> Void#>)
+                .responseString(completionHandler: { (response) in
+                    guard let jsonString = response.result.value else {
+                        return single(.error(HTTPError.noResultData))
+                    }
+                    
+                })
             return Disposables.create()
         })
     }

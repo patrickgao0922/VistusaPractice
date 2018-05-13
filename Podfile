@@ -11,6 +11,7 @@ target 'VistusaPractice' do
   pod 'ObjectMapper', '~> 3.1'
 
   def testing_pods
+    pod 'Mockingjay'
     pod 'Quick'
     pod 'Nimble'
     pod 'RxBlocking'
