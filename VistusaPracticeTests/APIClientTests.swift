@@ -9,11 +9,15 @@
 import Foundation
 import Quick
 import Nimble
+import Swinject
 import ObjectMapper
 @testable import VistusaPractice
 
 class APIClientTests:QuickSpec {
     override func spec() {
+        var container = Container()
+        var dependencyRegistry = DependencyRegistry(withContainer: container)
+        var apiClient:APIClient = dependencyRegistry.container.resolve(APIClient.self)
         
         it("testFetchFact") {
             
