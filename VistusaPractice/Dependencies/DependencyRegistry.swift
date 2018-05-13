@@ -15,4 +15,10 @@ class DependencyRegistry {
     init(withContainer container:Container) {
         self.container = container
     }
+    
+    func registerDependencies() {
+        container.register(APIClient.self) { (r) in
+            APIClientImplementation()
+        }
+    }
 }
