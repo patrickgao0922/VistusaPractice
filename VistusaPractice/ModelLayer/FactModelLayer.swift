@@ -23,8 +23,8 @@ class FactModelLayerImplementation:FactModelLayer {
     
     func fetchFact() -> Single<FactDTO> {
         return apiClient.fetchFact().map { (factResponse) -> FactDTO in
-            return FactDTO(title: nil, rows: [])
-//            return self.translationLayer.translateToFactDTO(from: factResponse)
+//            return FactDTO(title: nil, rows: [])
+            return self.translationLayer.translateToFactDTO(from: factResponse)
         }
     }
 }

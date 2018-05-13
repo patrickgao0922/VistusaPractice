@@ -20,14 +20,14 @@ class FactModelLayerTests:QuickSpec {
         let factModelLayer:FactModelLayer = dependencyRegistry.container.resolve(FactModelLayer.self)!
         
         it("Test fetchFact():") {
-            let result = factModelLayer.fetchFact().toBlocking().materialize()
+            let result = factModelLayer.fetchFact().toBlocking(timeout: 5.0).materialize()
             switch result {
             case .completed(let factDTOs):
                 expect(factDTOs[0].title).toNot(beNil())
                 expect(factDTOs[0].title).to(equal("About Canada"))
                 expect(factDTOs[0].rows.count).to(equal(14))
             case .failed(_, let error):
-                fail()
+                fail(error.localizedDescription)
             }
         }
     }
