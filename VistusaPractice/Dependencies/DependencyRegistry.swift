@@ -44,3 +44,19 @@ class DependencyRegistry {
         }
     }
 }
+
+// MARK: - Factory Methods
+extension DependencyRegistry {
+    
+    typealias factCollectionViewCellMaker = (UICollectionView,IndexPath,RowDTO, FactCollectionViewCellViewModel?) -> FactCollectionViewCell
+    func makeCollectionViewCell(collectionView:UICollectionView,at indexPath:IndexPath,with rowDTO:RowDTO, using viewModel:FactCollectionViewCellViewModel? = nil) -> FactCollectionViewCell {
+        let cellIdentifier = "factRowCell"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! FactCollectionViewCell
+        var cellVM = viewModel
+        if cellVM == nil {
+            cellVM = container.resolve(FactCollectionViewCellViewModel.self, argument: rowDTO)
+        }
+        cell.config(with: rowDTO, using: viewModel)
+        return cell
+    }
+}

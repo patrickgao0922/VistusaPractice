@@ -9,5 +9,16 @@
 import UIKit
 
 class FactCollectionViewCell: UICollectionViewCell {
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
     
+    fileprivate weak var viewModel:FactCollectionViewCellViewModel? = nil
+    
+    func config(with rowDTO:RowDTO, using viewModel:FactCollectionViewCellViewModel? = nil) {
+        if let viewModel = viewModel {
+            self.viewModel = viewModel
+        }
+        self.titleLabel.text = viewModel?.title
+        self.descriptionLabel.text = viewModel?.description
+    }
 }

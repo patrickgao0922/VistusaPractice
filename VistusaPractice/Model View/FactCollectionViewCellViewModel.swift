@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-protocol FactCollectionViewCellViewModel {
+protocol FactCollectionViewCellViewModel:class {
     var title:String? {get}
     var description:String? {get}
     var image:Variable<UIImage?> {get}
