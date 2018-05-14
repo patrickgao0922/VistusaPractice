@@ -10,12 +10,18 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+protocol FactCollectionViewDelegate {
+    func reloadCell(at indexPath: IndexPath)
+}
+
 protocol FactCollectionViewViewModel {
     var fact:Variable<FactDTO?> {get}
+    var delegate:FactCollectionViewDelegate? {get set}
     func fetchFact()
     func addViewModel(forCellAtIndexPath indexPath:IndexPath, viewModel:FactCollectionViewCellViewModel)
     func obtainViewModel(forCellAtIndexPath indexPath:IndexPath) -> FactCollectionViewCellViewModel?
     func startDownloadImage(atPaths paths:[IndexPath])
+    func imageSize(at indexPath:IndexPath) -> CGSize
 }
 
 class FactCollectionViewViewModelImplementation:FactCollectionViewViewModel {
@@ -23,6 +29,8 @@ class FactCollectionViewViewModelImplementation:FactCollectionViewViewModel {
     fileprivate var modelLayer:FactModelLayer
     fileprivate var disposeBag:DisposeBag
     fileprivate var cellViewModels:[FactCollectionViewCellViewModel]
+    
+    var delegate: FactCollectionViewDelegate?
     
 //    var cellViewModels:
     
@@ -48,6 +56,7 @@ class FactCollectionViewViewModelImplementation:FactCollectionViewViewModel {
     
     func addViewModel(forCellAtIndexPath indexPath:IndexPath, viewModel:FactCollectionViewCellViewModel) {
         if indexPath.row > cellViewModels.count-1 {
+            viewModel.delegate = self
             cellViewModels.append(viewModel)
         }
     }
@@ -61,13 +70,34 @@ class FactCollectionViewViewModelImplementation:FactCollectionViewViewModel {
         }
     }
     
-    
     func startDownloadImage(atPaths paths:[IndexPath]) {
         for indexPath in paths {
             let cellViewModel = cellViewModels[indexPath.row]
-            cellViewModel.downloadImage()
+            cellViewModel.downloadImage(at: indexPath)
         }
+    }
+    
+    /// Return size of image of a cell
+    ///
+    /// - Parameter indexPath: indexPath of the cell
+    /// - Returns: image size
+    func imageSize(at indexPath:IndexPath) -> CGSize {
+        var imageSize = CGSize(width: 1, height: 1)
+        if indexPath.row < cellViewModels.count {
+            let cellViewModel = cellViewModels[indexPath.row]
+            if let image = cellViewModel.image.value {
+                imageSize = image.size
+            }
+        }
+        return imageSize
+    }
+}
+
+extension FactCollectionViewViewModelImplementation:CellViewModelDelegate {
+    func reloadCell(at indexPath: IndexPath) {
+        delegate?.reloadCell(at: indexPath)
     }
     
     
 }
+

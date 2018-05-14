@@ -25,14 +25,6 @@ class FactCollectionViewCell: UICollectionViewCell {
         self.imageView.image = nil
         imageDownloadingSub?.dispose()
         setupObservables()
-//        startDownloadImage()
-        
-//        self.titleLabel.text = viewModel?.title
-//        self.descriptionLabel.text = viewModel?.description
-    }
-    
-    func startDownloadImage(){
-        viewModel?.downloadImage()
     }
     
     func returnCellViewModel() -> FactCollectionViewCellViewModel{

@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     
     func config(viewModel: FactCollectionViewViewModel,cellMaker:@escaping DependencyRegistry.FactCollectionViewCellMaker) {
         self.viewModel = viewModel
+        self.viewModel.delegate = self
         self.cellMaker = cellMaker
         viewModel.fetchFact()
     }
@@ -55,9 +56,9 @@ extension ViewController:UICollectionViewDataSource {
 }
 
 extension ViewController:UICollectionViewDelegateFlowLayout{
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: 100, height: 100)
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return viewModel.imageSize(at: indexPath)
+    }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         startDownloadImagesOnScreen()
     }
@@ -74,22 +75,32 @@ extension ViewController:UICollectionViewDelegateFlowLayout{
 }
 
 // MARK: - Setup UI Layout
-extension ViewController {
-    func setupLayout() {
-        layout.estimatedItemSize = CGSize(width: 1, height: 1)
-    }
-}
+//extension ViewController {
+//    func setupLayout() {
+//        layout.estimatedItemSize = CGSize(width: 1, height: 1)
+//    }
+//}
 
 // MARK: - Config Observables
 extension ViewController {
     func setupObservables() {
         viewModel.fact.asDriver().asObservable().subscribe(onNext: { (_) in
-            self.collectionView.reloadData()
+            self.collectionView.performBatchUpdates({
+//                let indexSet =
+                self.collectionView.reloadSections(IndexSet(integer: 0))
+            }, completion: { (_) in
+                self.startDownloadImagesOnScreen()
+            })
+            
             self.startDownloadImagesOnScreen()
         }).disposed(by: disposeBag)
     }
 }
 
-extension ViewController:UICollectionViewDelegate {
+extension ViewController:FactCollectionViewDelegate {
+    func reloadCell(at indexPath: IndexPath) {
+        self.collectionView.reloadItems(at: [indexPath])
+    }
+    
     
 }

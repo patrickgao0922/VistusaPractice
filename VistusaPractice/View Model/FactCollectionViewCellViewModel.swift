@@ -8,15 +8,19 @@
 
 import Foundation
 import RxSwift
-
+protocol CellViewModelDelegate {
+    func reloadCell(at indexPath:IndexPath)
+}
 protocol FactCollectionViewCellViewModel:class {
     var title:String? {get}
+    var delegate:CellViewModelDelegate? {get set}
     var description:String? {get}
     var image:Variable<UIImage?> {get}
-    func downloadImage()
+     func downloadImage(at indexPath:IndexPath)
 }
 
 class FactCollectionViewCellViewModelImplementation:FactCollectionViewCellViewModel {
+    
     var title:String?
     var description:String?
     fileprivate var imageHref:String?
@@ -25,6 +29,8 @@ class FactCollectionViewCellViewModelImplementation:FactCollectionViewCellViewMo
     fileprivate var imageDownloader:ImageDownloader
     var image:Variable<UIImage?>
     fileprivate var needToDownloadImage:Bool
+    
+    var delegate:CellViewModelDelegate?
     
     init(rowDTO:RowDTO,imageDownloader:ImageDownloader) {
         self.rowDTO = rowDTO
@@ -41,7 +47,7 @@ class FactCollectionViewCellViewModelImplementation:FactCollectionViewCellViewMo
         }
     }
     
-    func downloadImage() {
+    func downloadImage(at indexPath:IndexPath) {
         if needToDownloadImage {
             needToDownloadImage = false
             if let imageHref = self.imageHref {
@@ -49,6 +55,10 @@ class FactCollectionViewCellViewModelImplementation:FactCollectionViewCellViewMo
                     switch single {
                     case .success(let path):
                         self.image.value = UIImage(contentsOfFile: path)
+                        DispatchQueue.main.async {
+                            self.delegate?.reloadCell(at: indexPath)
+                        }
+                        
                     case .error(_):
                         self.image.value = nil
                     }
