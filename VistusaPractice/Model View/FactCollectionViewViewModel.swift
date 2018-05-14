@@ -29,6 +29,7 @@ class FactCollectionViewViewModelImplementation:FactCollectionViewViewModel {
         fact = Variable<FactDTO?>(nil)
     }
     
+    /// Fetch latest fact
     func fetchFact() {
         modelLayer.fetchFact().subscribe { (single) in
             switch single {

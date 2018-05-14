@@ -24,6 +24,8 @@
 		9689A10E20A8FFE90019FB1A /* FactModelLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A10D20A8FFE90019FB1A /* FactModelLayerTests.swift */; };
 		9689A11120A9055C0019FB1A /* FactCollectionViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A11020A9055C0019FB1A /* FactCollectionViewViewModel.swift */; };
 		9689A11320A9066C0019FB1A /* FactCollectionViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A11220A9066C0019FB1A /* FactCollectionViewViewModelTests.swift */; };
+		9689A11620A928C50019FB1A /* FactCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A11520A928C50019FB1A /* FactCollectionViewCell.swift */; };
+		9689A11820A929300019FB1A /* FactCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A11720A929300019FB1A /* FactCollectionViewCellViewModel.swift */; };
 		96D8E2E120A69B8600CDC308 /* APIRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D8E2E020A69B8600CDC308 /* APIRouterTests.swift */; };
 		96D8E2E320A6A12D00CDC308 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D8E2E220A6A12D00CDC308 /* APIRouter.swift */; };
 		C0FDB4A5CC575165A5A29A55 /* Pods_VistusaPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20008D6000FDC60B2B648A0 /* Pods_VistusaPractice.framework */; };
@@ -61,6 +63,8 @@
 		9689A10D20A8FFE90019FB1A /* FactModelLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModelLayerTests.swift; sourceTree = "<group>"; };
 		9689A11020A9055C0019FB1A /* FactCollectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCollectionViewViewModel.swift; sourceTree = "<group>"; };
 		9689A11220A9066C0019FB1A /* FactCollectionViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCollectionViewViewModelTests.swift; sourceTree = "<group>"; };
+		9689A11520A928C50019FB1A /* FactCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCollectionViewCell.swift; sourceTree = "<group>"; };
+		9689A11720A929300019FB1A /* FactCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		96D8E2E020A69B8600CDC308 /* APIRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouterTests.swift; sourceTree = "<group>"; };
 		96D8E2E220A6A12D00CDC308 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		98E05D71B3103D2F2633C2F4 /* Pods_VistusaPracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VistusaPracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +158,7 @@
 		96652E0D20A56366006A53DA /* VistusaPractice */ = {
 			isa = PBXGroup;
 			children = (
+				9689A11420A9284E0019FB1A /* View */,
 				9689A10F20A9052B0019FB1A /* Model View */,
 				96110E3120A7E9A5002E311C /* TranslationLayer */,
 				96110E2E20A7E794002E311C /* Data Transfer Object */,
@@ -161,7 +166,6 @@
 				96110E2820A7DD36002E311C /* Dependencies */,
 				96D8E2DF20A69B0600CDC308 /* Network Layer */,
 				96652E0E20A56366006A53DA /* AppDelegate.swift */,
-				96652E1020A56366006A53DA /* ViewController.swift */,
 				96652E1220A56366006A53DA /* Main.storyboard */,
 				96652E1520A5636B006A53DA /* Assets.xcassets */,
 				96652E1720A5636B006A53DA /* LaunchScreen.storyboard */,
@@ -188,8 +192,18 @@
 			isa = PBXGroup;
 			children = (
 				9689A11020A9055C0019FB1A /* FactCollectionViewViewModel.swift */,
+				9689A11720A929300019FB1A /* FactCollectionViewCellViewModel.swift */,
 			);
 			path = "Model View";
+			sourceTree = "<group>";
+		};
+		9689A11420A9284E0019FB1A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				96652E1020A56366006A53DA /* ViewController.swift */,
+				9689A11520A928C50019FB1A /* FactCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		96D8E2DF20A69B0600CDC308 /* Network Layer */ = {
@@ -414,6 +428,8 @@
 				96110E3020A7E7EE002E311C /* FactDTO.swift in Sources */,
 				96652E1120A56366006A53DA /* ViewController.swift in Sources */,
 				96D8E2E320A6A12D00CDC308 /* APIRouter.swift in Sources */,
+				9689A11620A928C50019FB1A /* FactCollectionViewCell.swift in Sources */,
+				9689A11820A929300019FB1A /* FactCollectionViewCellViewModel.swift in Sources */,
 				96110E2A20A7DD58002E311C /* DependencyRegistry.swift in Sources */,
 				96110E2D20A7E759002E311C /* FactModelLayer.swift in Sources */,
 				96110E3320A7E9B6002E311C /* TranslationLayer.swift in Sources */,

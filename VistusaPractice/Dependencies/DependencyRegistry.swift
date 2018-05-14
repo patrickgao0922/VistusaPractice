@@ -15,6 +15,7 @@ class DependencyRegistry {
     init(withContainer container:Container) {
         self.container = container
         registerDependencies()
+        registerViewModel()
     }
     
     func registerDependencies() {
@@ -28,6 +29,14 @@ class DependencyRegistry {
         
         container.register(FactModelLayer.self) { r in
             FactModelLayerImplementation(with: r.resolve(APIClient.self)!, translationLayer: r.resolve(FactTranslationLayer.self)!)
+        }
+        
+        
+    }
+    
+    func registerViewModel() {
+        container.register(FactCollectionViewCellViewModel.self) { (r, rowDTO) in
+            FactCollectionViewCellViewModelImplementation(rowDTO: rowDTO)
         }
         
         container.register(FactCollectionViewViewModel.self) { r in
