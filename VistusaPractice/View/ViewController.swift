@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        collectionView.delegate = self
         setupObservables()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -43,15 +44,32 @@ extension ViewController:UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = cellMaker(collectionView,indexPath,viewModel.fact.value!.rows[indexPath.row],nil)
+        let cellViewModel = viewModel.obtainViewModel(forCellAtIndexPath: indexPath)
+        let cell = cellMaker(collectionView,indexPath,viewModel.fact.value!.rows[indexPath.row],cellViewModel)
+        if cellViewModel == nil {
+            viewModel.addViewModel(forCellAtIndexPath: indexPath, viewModel: cell.returnCellViewModel())
+        }
         return cell
     }
 
 }
 
 extension ViewController:UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 100)
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: 100, height: 100)
+//    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        startDownloadImagesOnScreen()
+    }
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            startDownloadImagesOnScreen()
+        }
+    }
+    
+    func startDownloadImagesOnScreen() {
+        let paths = collectionView.indexPathsForVisibleItems
+        viewModel.startDownloadImage(atPaths: paths)
     }
 }
 
@@ -67,6 +85,11 @@ extension ViewController {
     func setupObservables() {
         viewModel.fact.asDriver().asObservable().subscribe(onNext: { (_) in
             self.collectionView.reloadData()
+            self.startDownloadImagesOnScreen()
         }).disposed(by: disposeBag)
     }
+}
+
+extension ViewController:UICollectionViewDelegate {
+    
 }

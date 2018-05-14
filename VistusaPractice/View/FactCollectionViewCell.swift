@@ -15,7 +15,7 @@ class FactCollectionViewCell: UICollectionViewCell {
     
     fileprivate var imageDownloadingSub:Disposable?
     
-    fileprivate weak var viewModel:FactCollectionViewCellViewModel? = nil
+    fileprivate var viewModel:FactCollectionViewCellViewModel? = nil
     fileprivate var disposeBag:DisposeBag = DisposeBag()
     
     func config(with rowDTO:RowDTO, using viewModel:FactCollectionViewCellViewModel? = nil) {
@@ -25,7 +25,7 @@ class FactCollectionViewCell: UICollectionViewCell {
         self.imageView.image = nil
         imageDownloadingSub?.dispose()
         setupObservables()
-        startDownloadImage()
+//        startDownloadImage()
         
 //        self.titleLabel.text = viewModel?.title
 //        self.descriptionLabel.text = viewModel?.description
@@ -34,11 +34,15 @@ class FactCollectionViewCell: UICollectionViewCell {
     func startDownloadImage(){
         viewModel?.downloadImage()
     }
+    
+    func returnCellViewModel() -> FactCollectionViewCellViewModel{
+        return viewModel!
+    }
 }
 
 extension FactCollectionViewCell {
     func setupObservables() {
-        imageDownloadingSub = viewModel?.image.asDriver().asObservable().skip(1).subscribe(onNext: { (image) in
+        imageDownloadingSub = viewModel?.image.asDriver().asObservable().subscribe(onNext: { (image) in
             self.imageView.image = image
         })
         imageDownloadingSub?.disposed(by: disposeBag)

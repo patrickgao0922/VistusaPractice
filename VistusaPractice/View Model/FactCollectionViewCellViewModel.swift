@@ -24,6 +24,7 @@ class FactCollectionViewCellViewModelImplementation:FactCollectionViewCellViewMo
     fileprivate var disposeBag:DisposeBag = DisposeBag()
     fileprivate var imageDownloader:ImageDownloader
     var image:Variable<UIImage?>
+    fileprivate var needToDownloadImage:Bool
     
     init(rowDTO:RowDTO,imageDownloader:ImageDownloader) {
         self.rowDTO = rowDTO
@@ -32,19 +33,29 @@ class FactCollectionViewCellViewModelImplementation:FactCollectionViewCellViewMo
         self.imageHref = rowDTO.imageHref
         self.imageDownloader = imageDownloader
         image = Variable<UIImage?>(nil)
+        
+        if imageHref != nil {
+            needToDownloadImage = true
+        } else {
+            needToDownloadImage = false
+        }
     }
     
     func downloadImage() {
-        if let imageHref = self.imageHref {
-            imageDownloader.downloadImage(urlString: imageHref).subscribe { (single) in
-                switch single {
-                case .success(let path):
-                    self.image.value = UIImage(contentsOfFile: path)
-                case .error(_):
-                    self.image.value = nil
-                }
-            }.disposed(by: disposeBag)
+        if needToDownloadImage {
+            needToDownloadImage = false
+            if let imageHref = self.imageHref {
+                imageDownloader.downloadImage(urlString: imageHref).subscribe { (single) in
+                    switch single {
+                    case .success(let path):
+                        self.image.value = UIImage(contentsOfFile: path)
+                    case .error(_):
+                        self.image.value = nil
+                    }
+                    }.disposed(by: disposeBag)
+            }
         }
+        
         
     }
 }
