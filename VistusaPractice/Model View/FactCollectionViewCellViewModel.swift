@@ -21,17 +21,30 @@ class FactCollectionViewCellViewModelImplementation:FactCollectionViewCellViewMo
     var description:String?
     fileprivate var imageHref:String?
     fileprivate var rowDTO:RowDTO
+    fileprivate var disposeBag:DisposeBag = DisposeBag()
+    fileprivate var imageDownloader:ImageDownloader
     var image:Variable<UIImage?>
     
-    init(rowDTO:RowDTO) {
+    init(rowDTO:RowDTO,imageDownloader:ImageDownloader) {
         self.rowDTO = rowDTO
         self.title = rowDTO.title
         self.description = rowDTO.description
         self.imageHref = rowDTO.imageHref
+        self.imageDownloader = imageDownloader
         image = Variable<UIImage?>(nil)
     }
     
     func downloadImage() {
+        if let imageHref = self.imageHref {
+            imageDownloader.downloadImage(urlString: imageHref).subscribe { (single) in
+                switch single {
+                case .success(let path):
+                    self.image.value = UIImage(contentsOfFile: path)
+                case .error(_):
+                    self.image.value = nil
+                }
+            }.disposed(by: disposeBag)
+        }
         
     }
 }

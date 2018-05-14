@@ -18,7 +18,7 @@ class ImageDownloaderTests:QuickSpec {
     override func spec() {
         let container:Container = Container()
         let dependencyRegistry:DependencyRegistry = DependencyRegistry(withContainer: container)
-        var imageDownloader: ImageDownloader = dependencyRegistry.container.resolve(ImageDownloader.self)!
+        let imageDownloader: ImageDownloader = dependencyRegistry.container.resolve(ImageDownloader.self)!
         
         it("Test download image") {
             let urlString = "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/American_Beaver.jpg/220px-American_Beaver.jpg"

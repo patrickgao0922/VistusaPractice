@@ -38,7 +38,7 @@ class DependencyRegistry {
     
     func registerViewModel() {
         container.register(FactCollectionViewCellViewModel.self) { (r, rowDTO) in
-            FactCollectionViewCellViewModelImplementation(rowDTO: rowDTO)
+            FactCollectionViewCellViewModelImplementation(rowDTO: rowDTO, imageDownloader: r.resolve(ImageDownloader.self)!)
         }
         
         container.register(FactCollectionViewViewModel.self) { r in

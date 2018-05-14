@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class FactCollectionViewCell: UICollectionViewCell {
 
@@ -21,5 +22,11 @@ class FactCollectionViewCell: UICollectionViewCell {
         
 //        self.titleLabel.text = viewModel?.title
 //        self.descriptionLabel.text = viewModel?.description
+    }
+}
+
+extension FactCollectionViewCell {
+    func setupObservables() {
+        
     }
 }
