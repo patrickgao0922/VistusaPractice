@@ -54,7 +54,7 @@ extension DependencyRegistry {
         if cellVM == nil {
             cellVM = container.resolve(FactCollectionViewCellViewModel.self, argument: rowDTO)
         }
-        cell.config(with: rowDTO, using: viewModel)
+        cell.config(with: rowDTO, using: cellVM)
         return cell
     }
 }

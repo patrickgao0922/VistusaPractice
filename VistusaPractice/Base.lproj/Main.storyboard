@@ -60,6 +60,7 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="Yfy-j4-h8d" secondAttribute="trailing" constant="8" id="iR9-Mw-G2R"/>
                                             <constraint firstItem="ofu-CM-IZN" firstAttribute="centerX" secondItem="cgm-Nl-Zlo" secondAttribute="centerX" id="sGQ-Ms-uwZ"/>
                                         </constraints>
+                                        <size key="customSize" width="273" height="234"/>
                                         <connections>
                                             <outlet property="descriptionLabel" destination="Yfy-j4-h8d" id="ZXw-aZ-kOf"/>
                                             <outlet property="titleLabel" destination="ofu-CM-IZN" id="Gaf-07-gsW"/>

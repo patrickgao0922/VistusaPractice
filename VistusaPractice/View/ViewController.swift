@@ -18,13 +18,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        setupObservables()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     func config(viewModel: FactCollectionViewViewModel,cellMaker:@escaping DependencyRegistry.FactCollectionViewCellMaker) {
         self.viewModel = viewModel
         self.cellMaker = cellMaker
-        setupObservables()
         viewModel.fetchFact()
     }
 }

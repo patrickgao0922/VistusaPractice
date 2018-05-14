@@ -16,6 +16,8 @@ PODS:
     - RxSwift (~> 4.0)
   - RxSwift (4.1.2)
   - Swinject (2.4.0)
+  - SwinjectStoryboard (1.2.1):
+    - Swinject (~> 2.3)
   - URITemplate (2.0.3)
 
 DEPENDENCIES:
@@ -28,6 +30,7 @@ DEPENDENCIES:
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
   - Swinject
+  - SwinjectStoryboard
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -40,6 +43,7 @@ SPEC REPOS:
     - RxCocoa
     - RxSwift
     - Swinject
+    - SwinjectStoryboard
     - URITemplate
 
 SPEC CHECKSUMS:
@@ -52,8 +56,9 @@ SPEC CHECKSUMS:
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   Swinject: a1364b0f66c2736bb03c1c7cab54809e16df25da
+  SwinjectStoryboard: de60d1d30fbf442fe90fc5c31d9fff89cf3ef64f
   URITemplate: ace0c4c46dcf8afe6e89b4060621852886b15c3b
 
-PODFILE CHECKSUM: 42f67e16cb75ac276d5c61bf5b5889b222a9701c
+PODFILE CHECKSUM: e579dd01b466a4c545bac28a32011b5215d9b6c5
 
 COCOAPODS: 1.5.0
