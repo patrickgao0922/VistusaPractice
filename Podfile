@@ -6,6 +6,7 @@ target 'VistusaPractice' do
   use_frameworks!
   pod 'Swinject'
   pod 'SwinjectStoryboard'
+  pod 'CryptoSwift'
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
   pod 'Alamofire', '~> 4.7'

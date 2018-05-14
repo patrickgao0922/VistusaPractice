@@ -27,6 +27,9 @@
 		9689A11620A928C50019FB1A /* FactCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A11520A928C50019FB1A /* FactCollectionViewCell.swift */; };
 		9689A11820A929300019FB1A /* FactCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A11720A929300019FB1A /* FactCollectionViewCellViewModel.swift */; };
 		9689A11A20A93B6D0019FB1A /* SwinjectStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A11920A93B6D0019FB1A /* SwinjectStoryboard+Extension.swift */; };
+		9689A11C20A948AB0019FB1A /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A11B20A948AB0019FB1A /* ImageDownloader.swift */; };
+		9689A11F20A94B250019FB1A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A11E20A94B250019FB1A /* StringExtension.swift */; };
+		9689A12220A950C50019FB1A /* ImageDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A12120A950C50019FB1A /* ImageDownloaderTests.swift */; };
 		96D8E2E120A69B8600CDC308 /* APIRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D8E2E020A69B8600CDC308 /* APIRouterTests.swift */; };
 		96D8E2E320A6A12D00CDC308 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D8E2E220A6A12D00CDC308 /* APIRouter.swift */; };
 		C0FDB4A5CC575165A5A29A55 /* Pods_VistusaPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20008D6000FDC60B2B648A0 /* Pods_VistusaPractice.framework */; };
@@ -67,6 +70,9 @@
 		9689A11520A928C50019FB1A /* FactCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCollectionViewCell.swift; sourceTree = "<group>"; };
 		9689A11720A929300019FB1A /* FactCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		9689A11920A93B6D0019FB1A /* SwinjectStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		9689A11B20A948AB0019FB1A /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		9689A11E20A94B250019FB1A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		9689A12120A950C50019FB1A /* ImageDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTests.swift; sourceTree = "<group>"; };
 		96D8E2E020A69B8600CDC308 /* APIRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouterTests.swift; sourceTree = "<group>"; };
 		96D8E2E220A6A12D00CDC308 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		98E05D71B3103D2F2633C2F4 /* Pods_VistusaPracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VistusaPracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +167,7 @@
 		96652E0D20A56366006A53DA /* VistusaPractice */ = {
 			isa = PBXGroup;
 			children = (
+				9689A11D20A94B170019FB1A /* Utility */,
 				9689A11420A9284E0019FB1A /* View */,
 				9689A10F20A9052B0019FB1A /* Model View */,
 				96110E3120A7E9A5002E311C /* TranslationLayer */,
@@ -187,6 +194,7 @@
 				96110E3420A7F933002E311C /* TranslationLayerTests.swift */,
 				9689A10D20A8FFE90019FB1A /* FactModelLayerTests.swift */,
 				9689A11220A9066C0019FB1A /* FactCollectionViewViewModelTests.swift */,
+				9689A12120A950C50019FB1A /* ImageDownloaderTests.swift */,
 			);
 			path = VistusaPracticeTests;
 			sourceTree = "<group>";
@@ -209,11 +217,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9689A11D20A94B170019FB1A /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9689A11E20A94B250019FB1A /* StringExtension.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		96D8E2DF20A69B0600CDC308 /* Network Layer */ = {
 			isa = PBXGroup;
 			children = (
 				96D8E2E220A6A12D00CDC308 /* APIRouter.swift */,
 				96110E2420A7C4BA002E311C /* APIClient.swift */,
+				9689A11B20A948AB0019FB1A /* ImageDownloader.swift */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
@@ -402,6 +419,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VistusaPractice/Pods-VistusaPractice-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -411,6 +429,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -431,11 +450,13 @@
 			files = (
 				9689A11120A9055C0019FB1A /* FactCollectionViewViewModel.swift in Sources */,
 				96110E3020A7E7EE002E311C /* FactDTO.swift in Sources */,
+				9689A11C20A948AB0019FB1A /* ImageDownloader.swift in Sources */,
 				96652E1120A56366006A53DA /* ViewController.swift in Sources */,
 				96D8E2E320A6A12D00CDC308 /* APIRouter.swift in Sources */,
 				9689A11620A928C50019FB1A /* FactCollectionViewCell.swift in Sources */,
 				9689A11820A929300019FB1A /* FactCollectionViewCellViewModel.swift in Sources */,
 				96110E2A20A7DD58002E311C /* DependencyRegistry.swift in Sources */,
+				9689A11F20A94B250019FB1A /* StringExtension.swift in Sources */,
 				96110E2D20A7E759002E311C /* FactModelLayer.swift in Sources */,
 				96110E3320A7E9B6002E311C /* TranslationLayer.swift in Sources */,
 				9689A11A20A93B6D0019FB1A /* SwinjectStoryboard+Extension.swift in Sources */,
@@ -454,6 +475,7 @@
 				96652E2420A5636B006A53DA /* VistusaPracticeTests.swift in Sources */,
 				96D8E2E120A69B8600CDC308 /* APIRouterTests.swift in Sources */,
 				9689A10E20A8FFE90019FB1A /* FactModelLayerTests.swift in Sources */,
+				9689A12220A950C50019FB1A /* ImageDownloaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,7 +631,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8387LU2S3Z;
 				INFOPLIST_FILE = VistusaPractice/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.patrickgao.VistusaPractice.VistusaPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -625,7 +650,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8387LU2S3Z;
 				INFOPLIST_FILE = VistusaPractice/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.patrickgao.VistusaPractice.VistusaPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -642,7 +670,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8387LU2S3Z;
 				INFOPLIST_FILE = VistusaPracticeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.patrickgao.VistusaPractice.VistusaPracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -660,7 +692,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8387LU2S3Z;
 				INFOPLIST_FILE = VistusaPracticeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.patrickgao.VistusaPractice.VistusaPracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

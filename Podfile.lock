@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
+  - CryptoSwift (0.9.0)
   - Mockingjay (2.0.1):
     - Mockingjay/Core (= 2.0.1)
     - Mockingjay/XCTest (= 2.0.1)
@@ -22,6 +23,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - CryptoSwift
   - Mockingjay
   - Nimble
   - ObjectMapper (~> 3.1)
@@ -35,6 +37,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - CryptoSwift
     - Mockingjay
     - Nimble
     - ObjectMapper
@@ -48,6 +51,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  CryptoSwift: bca8c5b653dcc2d9734409242a070ff53bafac86
   Mockingjay: 11a621880d2887f1775bdcf824341eb68f218450
   Nimble: 391f07782af4b37914f9bd7b2ffbb952731b8202
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
@@ -59,6 +63,6 @@ SPEC CHECKSUMS:
   SwinjectStoryboard: de60d1d30fbf442fe90fc5c31d9fff89cf3ef64f
   URITemplate: ace0c4c46dcf8afe6e89b4060621852886b15c3b
 
-PODFILE CHECKSUM: e579dd01b466a4c545bac28a32011b5215d9b6c5
+PODFILE CHECKSUM: c8eb92a8f55cb2c9c6298590aacc0e5f49589070
 
 COCOAPODS: 1.5.0
