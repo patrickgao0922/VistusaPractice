@@ -49,6 +49,7 @@
                                             <constraint firstAttribute="bottom" secondItem="ZZb-gQ-PCX" secondAttribute="bottom" id="RKt-9n-Plb"/>
                                             <constraint firstItem="ZZb-gQ-PCX" firstAttribute="leading" secondItem="cgm-Nl-Zlo" secondAttribute="leading" id="SE2-15-dgS"/>
                                         </constraints>
+                                        <size key="customSize" width="244" height="238"/>
                                         <connections>
                                             <outlet property="imageView" destination="ZZb-gQ-PCX" id="xFq-RB-DnC"/>
                                         </connections>
