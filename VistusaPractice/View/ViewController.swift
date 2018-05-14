@@ -12,6 +12,7 @@ import RxSwift
 class ViewController: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var layout:UICollectionViewFlowLayout!
     var viewModel:FactCollectionViewViewModel!
     var cellMaker:DependencyRegistry.FactCollectionViewCellMaker!
     fileprivate var disposeBag:DisposeBag = DisposeBag()
@@ -44,6 +45,20 @@ extension ViewController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = cellMaker(collectionView,indexPath,viewModel.fact.value!.rows[indexPath.row],nil)
         return cell
+    }
+
+}
+
+extension ViewController:UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 100)
+    }
+}
+
+// MARK: - Setup UI Layout
+extension ViewController {
+    func setupLayout() {
+        layout.estimatedItemSize = CGSize(width: 1, height: 1)
     }
 }
 

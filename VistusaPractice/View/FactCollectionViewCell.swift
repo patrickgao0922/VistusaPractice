@@ -9,8 +9,8 @@
 import UIKit
 
 class FactCollectionViewCell: UICollectionViewCell {
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
+
+    @IBOutlet var imageView: UIImageView!
     
     fileprivate weak var viewModel:FactCollectionViewCellViewModel? = nil
     
@@ -18,7 +18,8 @@ class FactCollectionViewCell: UICollectionViewCell {
         if let viewModel = viewModel {
             self.viewModel = viewModel
         }
-        self.titleLabel.text = viewModel?.title
-        self.descriptionLabel.text = viewModel?.description
+        
+//        self.titleLabel.text = viewModel?.title
+//        self.descriptionLabel.text = viewModel?.description
     }
 }
