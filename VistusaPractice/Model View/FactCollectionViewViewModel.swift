@@ -10,11 +10,11 @@ import Foundation
 
 protocol FactCollectionViewViewModel {}
 
-class FactCollectionViewViewModelImplementation:FactCollectionViewModelView {
+class FactCollectionViewViewModelImplementation:FactCollectionViewViewModel {
     
     fileprivate var modelLayer:FactModelLayer
     init (withFactModelLayer modelLayer:FactModelLayer) {
-        self.modelLayer = modelLayerd
+        self.modelLayer = modelLayer
     }
     
 }

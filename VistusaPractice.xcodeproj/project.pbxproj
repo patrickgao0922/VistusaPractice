@@ -23,6 +23,7 @@
 		96652E2420A5636B006A53DA /* VistusaPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96652E2320A5636B006A53DA /* VistusaPracticeTests.swift */; };
 		9689A10E20A8FFE90019FB1A /* FactModelLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A10D20A8FFE90019FB1A /* FactModelLayerTests.swift */; };
 		9689A11120A9055C0019FB1A /* FactCollectionViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A11020A9055C0019FB1A /* FactCollectionViewViewModel.swift */; };
+		9689A11320A9066C0019FB1A /* FactCollectionViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A11220A9066C0019FB1A /* FactCollectionViewViewModelTests.swift */; };
 		96D8E2E120A69B8600CDC308 /* APIRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D8E2E020A69B8600CDC308 /* APIRouterTests.swift */; };
 		96D8E2E320A6A12D00CDC308 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D8E2E220A6A12D00CDC308 /* APIRouter.swift */; };
 		C0FDB4A5CC575165A5A29A55 /* Pods_VistusaPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20008D6000FDC60B2B648A0 /* Pods_VistusaPractice.framework */; };
@@ -59,6 +60,7 @@
 		96652E2520A5636B006A53DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9689A10D20A8FFE90019FB1A /* FactModelLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModelLayerTests.swift; sourceTree = "<group>"; };
 		9689A11020A9055C0019FB1A /* FactCollectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCollectionViewViewModel.swift; sourceTree = "<group>"; };
+		9689A11220A9066C0019FB1A /* FactCollectionViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCollectionViewViewModelTests.swift; sourceTree = "<group>"; };
 		96D8E2E020A69B8600CDC308 /* APIRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouterTests.swift; sourceTree = "<group>"; };
 		96D8E2E220A6A12D00CDC308 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		98E05D71B3103D2F2633C2F4 /* Pods_VistusaPracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VistusaPracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +179,7 @@
 				96110E2620A7C51E002E311C /* APIClientTests.swift */,
 				96110E3420A7F933002E311C /* TranslationLayerTests.swift */,
 				9689A10D20A8FFE90019FB1A /* FactModelLayerTests.swift */,
+				9689A11220A9066C0019FB1A /* FactCollectionViewViewModelTests.swift */,
 			);
 			path = VistusaPracticeTests;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96110E2720A7C51E002E311C /* APIClientTests.swift in Sources */,
+				9689A11320A9066C0019FB1A /* FactCollectionViewViewModelTests.swift in Sources */,
 				96110E3520A7F933002E311C /* TranslationLayerTests.swift in Sources */,
 				96652E2420A5636B006A53DA /* VistusaPracticeTests.swift in Sources */,
 				96D8E2E120A69B8600CDC308 /* APIRouterTests.swift in Sources */,

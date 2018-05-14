@@ -29,5 +29,9 @@ class DependencyRegistry {
         container.register(FactModelLayer.self) { r in
             FactModelLayerImplementation(with: r.resolve(APIClient.self)!, translationLayer: r.resolve(FactTranslationLayer.self)!)
         }
+        
+        container.register(FactCollectionViewViewModel.self) { r in
+            FactCollectionViewViewModelImplementation(withFactModelLayer: r.resolve(FactModelLayer.self)!)
+        }
     }
 }
