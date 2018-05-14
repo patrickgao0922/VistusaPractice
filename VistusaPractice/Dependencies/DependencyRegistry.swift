@@ -30,8 +30,6 @@ class DependencyRegistry {
         container.register(FactModelLayer.self) { r in
             FactModelLayerImplementation(with: r.resolve(APIClient.self)!, translationLayer: r.resolve(FactTranslationLayer.self)!)
         }
-        
-        
     }
     
     func registerViewModel() {
@@ -48,7 +46,7 @@ class DependencyRegistry {
 // MARK: - Factory Methods
 extension DependencyRegistry {
     
-    typealias factCollectionViewCellMaker = (UICollectionView,IndexPath,RowDTO, FactCollectionViewCellViewModel?) -> FactCollectionViewCell
+    typealias FactCollectionViewCellMaker = (UICollectionView,IndexPath,RowDTO, FactCollectionViewCellViewModel?) -> FactCollectionViewCell
     func makeCollectionViewCell(collectionView:UICollectionView,at indexPath:IndexPath,with rowDTO:RowDTO, using viewModel:FactCollectionViewCellViewModel? = nil) -> FactCollectionViewCell {
         let cellIdentifier = "factRowCell"
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! FactCollectionViewCell
