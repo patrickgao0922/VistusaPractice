@@ -21,18 +21,22 @@ enum HTTPError:Error{
 }
 
 class APIClientImplementation:NSObject,APIClient {
+    
     func fetchFact() -> Single<FactResponse>{
         return Single<FactResponse>.create(subscribe: { (single) -> Disposable in
-            request(APIRouter.fact)
-                .responseString(completionHandler: { (response) in
-                    guard let jsonString = response.result.value else {
-                        return single(.error(HTTPError.noResultData))
-                    }
-                    guard let factResponse = FactResponse(JSONString: jsonString) else {
-                        return single(.error(HTTPError.jsonParsingError))
-                    }
-                    single(.success(factResponse))
-                })
+            let dispatchQueue = DispatchQueue(label: "com.patrickgao.VistusaPractice")
+            dispatchQueue.async {
+                request(APIRouter.fact)
+                    .responseString(completionHandler: { (response) in
+                        guard let jsonString = response.result.value else {
+                            return single(.error(HTTPError.noResultData))
+                        }
+                        guard let factResponse = FactResponse(JSONString: jsonString) else {
+                            return single(.error(HTTPError.jsonParsingError))
+                        }
+                        single(.success(factResponse))
+                    })
+            }
             return Disposables.create()
         })
     }

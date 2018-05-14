@@ -17,4 +17,9 @@ class FactCollectionViewViewModelImplementation:FactCollectionViewViewModel {
         self.modelLayer = modelLayer
     }
     
+    func fetchFact() {
+        
+    }
 }
+
+//struct FactSection
