@@ -32,6 +32,7 @@
 		9689A12220A950C50019FB1A /* ImageDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689A12120A950C50019FB1A /* ImageDownloaderTests.swift */; };
 		96D8E2E120A69B8600CDC308 /* APIRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D8E2E020A69B8600CDC308 /* APIRouterTests.swift */; };
 		96D8E2E320A6A12D00CDC308 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D8E2E220A6A12D00CDC308 /* APIRouter.swift */; };
+		96F2836220AA79E700F659FB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2836120AA79E700F659FB /* DetailViewController.swift */; };
 		C0FDB4A5CC575165A5A29A55 /* Pods_VistusaPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20008D6000FDC60B2B648A0 /* Pods_VistusaPractice.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		9689A12120A950C50019FB1A /* ImageDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTests.swift; sourceTree = "<group>"; };
 		96D8E2E020A69B8600CDC308 /* APIRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouterTests.swift; sourceTree = "<group>"; };
 		96D8E2E220A6A12D00CDC308 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		96F2836120AA79E700F659FB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		98E05D71B3103D2F2633C2F4 /* Pods_VistusaPracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VistusaPracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F2334CB25CFE26D8C77012 /* Pods-VistusaPracticeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VistusaPracticeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VistusaPracticeTests/Pods-VistusaPracticeTests.release.xcconfig"; sourceTree = "<group>"; };
 		C36FACB328C011882AE4FC9E /* Pods-VistusaPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VistusaPractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VistusaPractice/Pods-VistusaPractice.debug.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			children = (
 				96652E1020A56366006A53DA /* ViewController.swift */,
 				9689A11520A928C50019FB1A /* FactCollectionViewCell.swift */,
+				96F2836120AA79E700F659FB /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				96110E2D20A7E759002E311C /* FactModelLayer.swift in Sources */,
 				96110E3320A7E9B6002E311C /* TranslationLayer.swift in Sources */,
 				9689A11A20A93B6D0019FB1A /* SwinjectStoryboard+Extension.swift in Sources */,
+				96F2836220AA79E700F659FB /* DetailViewController.swift in Sources */,
 				96652E0F20A56366006A53DA /* AppDelegate.swift in Sources */,
 				96110E2520A7C4BA002E311C /* APIClient.swift in Sources */,
 			);

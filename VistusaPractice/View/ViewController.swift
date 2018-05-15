@@ -10,6 +10,10 @@ import UIKit
 import RxSwift
 
 class ViewController: UIViewController {
+    
+    enum Segue:String {
+        case showDetail
+    }
 
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var layout:UICollectionViewFlowLayout!
@@ -30,9 +34,34 @@ class ViewController: UIViewController {
         self.cellMaker = cellMaker
         viewModel.fetchFact()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifierString = segue.identifier else {
+            return
+        }
+        guard let segueIdentifier = Segue(rawValue: identifierString) else {
+            return
+        }
+        
+        switch segueIdentifier {
+        case .showDetail:
+            guard let indexPath = self.collectionView.indexPathsForSelectedItems?[0] else {
+                return
+            }
+            guard let viewModel = self.viewModel.obtainViewModel(forCellAtIndexPath: indexPath) else {
+                return
+            }
+            let destination = segue.destination as! DetailViewController
+            destination.config(with: viewModel)
+            
+        }
+    }
 }
 
 extension ViewController:UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: Segue.showDetail.rawValue, sender: self)
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let rowNumber = viewModel.fact.value?.rows.count else {
             return 0
