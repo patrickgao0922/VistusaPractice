@@ -35,6 +35,11 @@ class ViewController: UIViewController {
         viewModel.fetchFact()
     }
     
+    @IBAction func refreshButtonClicked(_ sender: Any) {
+        self.viewModel.fetchFact()
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifierString = segue.identifier else {
             return
@@ -129,6 +134,10 @@ extension ViewController {
             self.startDownloadImagesOnScreen()
         }).disposed(by: disposeBag)
     }
+}
+
+extension ViewController {
+    
 }
 
 extension ViewController:FactCollectionViewDelegate {
