@@ -34,6 +34,8 @@ class FactTranslationLayerImplementation:FactTranslationLayer {
         if factResponse.rows != nil {
             rowDTOs = factResponse.rows!.map({ (row) -> RowDTO in
                 return translationToRowDTO(from: row)
+            }).filter({ (rowDTO) -> Bool in
+                return rowDTO.imageHref != nil || rowDTO.title != nil
             })
         }
         

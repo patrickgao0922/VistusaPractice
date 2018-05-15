@@ -86,7 +86,9 @@ class FactCollectionViewViewModelImplementation:FactCollectionViewViewModel {
         if indexPath.row < cellViewModels.count {
             let cellViewModel = cellViewModels[indexPath.row]
             if let image = cellViewModel.image.value {
-                imageSize = image.size
+                let width = image.size.width < UIScreen.main.bounds.size.width ? image.size.width : UIScreen.main.bounds.size.width
+                let height = image.size.height
+                imageSize = CGSize(width: width, height: height)
             }
         }
         return imageSize

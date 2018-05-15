@@ -20,6 +20,7 @@ class FactCollectionViewCell: UICollectionViewCell {
     fileprivate var disposeBag:DisposeBag = DisposeBag()
     
     func config(with rowDTO:RowDTO, using viewModel:FactCollectionViewCellViewModel? = nil) {
+        self.titleLabel.sizeToFit()
         if let viewModel = viewModel {
             self.viewModel = viewModel
         }

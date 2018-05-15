@@ -89,7 +89,8 @@ extension ViewController:UICollectionViewDelegateFlowLayout{
         if let size = viewModel.imageSize(at: indexPath) {
             return size
         }
-        return CGSize(width: 120, height: 30)
+//        return CGSize(width: 120, height: 30)
+        return CGSize(width: 200, height: 200)
 //        return viewModel.imageSize(at: indexPath)
     }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

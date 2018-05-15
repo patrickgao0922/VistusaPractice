@@ -50,6 +50,7 @@ class DetailViewController: UIViewController {
 // MARK: - setup Observable
 extension DetailViewController {
     func setupUI() {
+        self.detailLabel.sizeToFit()
         self.navigationItem.title = self.viewModel?.title
         self.detailLabel.text = self.viewModel?.description
     }
