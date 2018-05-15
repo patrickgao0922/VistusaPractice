@@ -57,7 +57,11 @@ extension ViewController:UICollectionViewDataSource {
 
 extension ViewController:UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return viewModel.imageSize(at: indexPath)
+        if let size = viewModel.imageSize(at: indexPath) {
+            return size
+        }
+        return CGSize(width: 120, height: 30)
+//        return viewModel.imageSize(at: indexPath)
     }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         startDownloadImagesOnScreen()

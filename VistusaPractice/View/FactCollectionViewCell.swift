@@ -13,6 +13,7 @@ class FactCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var imageView: UIImageView!
     
+    @IBOutlet var titleLabel: UILabel!
     fileprivate var imageDownloadingSub:Disposable?
     
     fileprivate var viewModel:FactCollectionViewCellViewModel? = nil
@@ -23,6 +24,7 @@ class FactCollectionViewCell: UICollectionViewCell {
             self.viewModel = viewModel
         }
         self.imageView.image = nil
+        self.titleLabel.text = viewModel?.title
         imageDownloadingSub?.dispose()
         setupObservables()
     }

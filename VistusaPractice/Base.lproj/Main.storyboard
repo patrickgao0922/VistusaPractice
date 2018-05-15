@@ -41,17 +41,26 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZZb-gQ-PCX">
                                                     <rect key="frame" x="0.0" y="0.0" width="244" height="238"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transportation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJ3-JR-Qdv">
+                                                    <rect key="frame" x="66" y="209" width="112" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="ZZb-gQ-PCX" firstAttribute="top" secondItem="cgm-Nl-Zlo" secondAttribute="top" id="BCv-Bq-BUV"/>
+                                            <constraint firstItem="xJ3-JR-Qdv" firstAttribute="centerX" secondItem="cgm-Nl-Zlo" secondAttribute="centerX" id="GjE-mv-ZMw"/>
                                             <constraint firstAttribute="trailing" secondItem="ZZb-gQ-PCX" secondAttribute="trailing" id="PkD-Nq-Kei"/>
                                             <constraint firstAttribute="bottom" secondItem="ZZb-gQ-PCX" secondAttribute="bottom" id="RKt-9n-Plb"/>
                                             <constraint firstItem="ZZb-gQ-PCX" firstAttribute="leading" secondItem="cgm-Nl-Zlo" secondAttribute="leading" id="SE2-15-dgS"/>
+                                            <constraint firstAttribute="bottom" secondItem="xJ3-JR-Qdv" secondAttribute="bottom" constant="8" id="eQW-x0-H6f"/>
                                         </constraints>
                                         <size key="customSize" width="244" height="238"/>
                                         <connections>
                                             <outlet property="imageView" destination="ZZb-gQ-PCX" id="xFq-RB-DnC"/>
+                                            <outlet property="titleLabel" destination="xJ3-JR-Qdv" id="B7q-lG-ME5"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

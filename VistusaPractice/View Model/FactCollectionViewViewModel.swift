@@ -21,7 +21,7 @@ protocol FactCollectionViewViewModel {
     func addViewModel(forCellAtIndexPath indexPath:IndexPath, viewModel:FactCollectionViewCellViewModel)
     func obtainViewModel(forCellAtIndexPath indexPath:IndexPath) -> FactCollectionViewCellViewModel?
     func startDownloadImage(atPaths paths:[IndexPath])
-    func imageSize(at indexPath:IndexPath) -> CGSize
+    func imageSize(at indexPath:IndexPath) -> CGSize?
 }
 
 class FactCollectionViewViewModelImplementation:FactCollectionViewViewModel {
@@ -81,8 +81,8 @@ class FactCollectionViewViewModelImplementation:FactCollectionViewViewModel {
     ///
     /// - Parameter indexPath: indexPath of the cell
     /// - Returns: image size
-    func imageSize(at indexPath:IndexPath) -> CGSize {
-        var imageSize = CGSize(width: 1, height: 1)
+    func imageSize(at indexPath:IndexPath) -> CGSize? {
+        var imageSize:CGSize? = nil
         if indexPath.row < cellViewModels.count {
             let cellViewModel = cellViewModels[indexPath.row]
             if let image = cellViewModel.image.value {

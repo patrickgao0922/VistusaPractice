@@ -18,6 +18,7 @@ protocol APIClient {
 enum HTTPError:Error{
     case noResultData
     case jsonParsingError
+    case imageParsingError
 }
 
 class APIClientImplementation:NSObject,APIClient {

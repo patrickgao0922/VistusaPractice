@@ -55,12 +55,11 @@ class FactCollectionViewCellViewModelImplementation:FactCollectionViewCellViewMo
                     switch single {
                     case .success(let path):
                         self.image.value = UIImage(contentsOfFile: path)
-                        DispatchQueue.main.async {
-                            self.delegate?.reloadCell(at: indexPath)
-                        }
-                        
                     case .error(_):
-                        self.image.value = nil
+                        self.image.value = UIImage(named: "placeholder")
+                    }
+                    DispatchQueue.main.async {
+                        self.delegate?.reloadCell(at: indexPath)
                     }
                     }.disposed(by: disposeBag)
             }

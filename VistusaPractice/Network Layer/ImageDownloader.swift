@@ -40,10 +40,19 @@ class ImageDownloaderImplementation:ImageDownloader {
             }else {
                 let dispatchQueue = DispatchQueue(label: "com.patrickgao.VistusaPractice")
                 dispatchQueue.async {
-                    download(url, method: .get, to:destination)
+                    let manager = Alamofire.SessionManager.default
+                    manager.session.configuration.timeoutIntervalForRequest = 10
+                    manager.session.configuration.timeoutIntervalForResource = 10
+                    manager.download(url, method: .get, to:destination)
                         .responseData(completionHandler: { (response) in
                             if let error = response.error {
                                 single(.error(error))
+                            }
+                            guard let data = response.result.value else{
+                                return single(.error(HTTPError.noResultData))
+                            }
+                            guard let image = UIImage(data: data) else {
+                                return single(.error(HTTPError.imageParsingError))
                             }
                             guard let imagePath = response.destinationURL?.path else {
                                 return single(.error(HTTPError.noResultData))
