@@ -44,6 +44,7 @@ class FactCollectionViewCellViewModelImplementation:FactCollectionViewCellViewMo
             needToDownloadImage = true
         } else {
             needToDownloadImage = false
+            self.image.value = UIImage(named:"placeholder")
         }
     }
     
